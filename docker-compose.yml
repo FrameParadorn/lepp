@@ -1,0 +1,13 @@
+version: "2"
+
+services:
+    lamp:
+        image: paraday2/lepp:v1
+        container_name: lepp_v1 
+        ports: 
+            - "8000:80"
+            - "8001:81"
+            - "5432:5432"
+        volumes:
+            - ./../:/var/www/html/src
+        restart: always
